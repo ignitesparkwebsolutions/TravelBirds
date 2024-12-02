@@ -7,13 +7,17 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  linkPath = window.location.protocol + "//" + window.location.host + window.location.pathname;
+
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
     window.location.reload();
   }
 
   ngOnInit(): void {
-    this.uxChanges();
+    setTimeout(() => {
+      this.uxChanges();
+    }, 300);
   }
 
   uxChanges() {
