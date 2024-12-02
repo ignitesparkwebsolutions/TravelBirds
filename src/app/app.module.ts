@@ -10,6 +10,7 @@ import { AboutUsComponent } from './core/about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent, HomeComponent, HeaderComponent, FooterComponent, TravelListComponent, AboutUsComponent, ContactUsComponent
   ],
   imports: [
-    BrowserModule, MatFormFieldModule, CommonModule, ReactiveFormsModule, BrowserAnimationsModule, MatInputModule, MatIconModule
+    BrowserModule, MatFormFieldModule, CommonModule, ReactiveFormsModule, BrowserAnimationsModule, MatInputModule, MatIconModule, MatTooltipModule
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { subscriptSizing: 'dynamic' } }

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  showClass = '';
+
+  toggle() {
+    this.showClass = (this.showClass == '') ? 'show' : '';
+  }
 }

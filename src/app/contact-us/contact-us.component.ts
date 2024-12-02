@@ -44,7 +44,7 @@ export class ContactUsComponent {
     this.alertBox.open(msg, "OK", {
       duration: this.alertDuration,
       horizontalPosition: 'end',
-      verticalPosition: 'top'
+      verticalPosition: 'bottom'
     });
   }
 

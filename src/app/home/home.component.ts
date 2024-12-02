@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
-    window.location.reload();
+    setTimeout(() => {
+      this.uxChanges();
+    }, 300);
   }
 
   ngOnInit(): void {
@@ -26,14 +28,14 @@ export class HomeComponent implements OnInit {
 
     let carouselDivs = document.querySelectorAll('.carousel-images div');
     carouselDivs.forEach((item) => {
-      (item as HTMLElement).style.height = (screenHeight / 2) + 'px';
+      (item as HTMLElement).style.height = (screenWidth * 0.8) + 'px';
       (item as HTMLElement).style.width = screenWidth + 'px';
-      (item as HTMLElement).style.maxHeight = (screenWidth * 0.8) + 'px';
+      (item as HTMLElement).style.maxHeight = '350px';
     });
 
     document.querySelectorAll('.carousel-images div img').forEach(item => {
-      (item as HTMLElement).style.height = (screenHeight / 2) + 'px';
-      (item as HTMLElement).style.maxHeight = (screenWidth * 0.8) + 'px';
+      (item as HTMLElement).style.height = (screenWidth * 0.8) + 'px';
+      (item as HTMLElement).style.maxHeight = '350px';
       const elemWidth = (item as HTMLElement).offsetWidth;
       if (screenWidth < elemWidth) {
         (item as HTMLElement).style.width = (screenWidth - 40) + 'px';
