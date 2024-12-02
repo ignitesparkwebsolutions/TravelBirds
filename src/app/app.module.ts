@@ -14,10 +14,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, HeaderComponent, FooterComponent, TravelListComponent, AboutUsComponent, ContactUsComponent
+    AppComponent, HomeComponent, HeaderComponent, FooterComponent, TravelListComponent, AboutUsComponent, ContactUsComponent, CarListComponent
   ],
   imports: [
     BrowserModule, MatFormFieldModule, CommonModule, ReactiveFormsModule, BrowserAnimationsModule, MatInputModule, MatIconModule, MatTooltipModule

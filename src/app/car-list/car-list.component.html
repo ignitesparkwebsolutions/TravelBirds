@@ -1,0 +1,10 @@
+<div class="container mt-5" id="packages">
+    <h2>Our Range of Vehicles</h2>
+    <div class="row">
+      <div class="col-md-2" *ngFor="let car of carList">
+        <div class="card">
+          <img [src]="car.image" class="card-img-top" alt="Car Image">
+        </div>
+      </div>
+    </div>
+  </div>
