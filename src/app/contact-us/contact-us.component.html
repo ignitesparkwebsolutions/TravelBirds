@@ -1,0 +1,28 @@
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" [formGroup]="form">
+        <mat-form-field subscriptSizing="dynamic">
+            <label for="name">Full Name:</label>
+            <input matInput type="text" id="name" formControlName="name" required placeholder="(required)">
+        </mat-form-field>
+
+        <mat-form-field subscriptSizing="dynamic">
+            <label for="mobile">Mobile Number:</label>
+            <input matInput type="tel" id="mobile" formControlName="mobile" required placeholder="(required)">
+        </mat-form-field>
+
+        <mat-form-field subscriptSizing="dynamic">
+            <label for="email">Email Address:</label>
+            <input matInput type="email" id="email" formControlName="email" placeholder="(optional)">
+        </mat-form-field>
+
+        <mat-form-field subscriptSizing="dynamic">
+            <label for="message">Message:</label>
+            <textarea matInput id="message" formControlName="message" placeholder="(optional)"></textarea>
+        </mat-form-field>
+        <div style="text-align: center;">
+            <button type="submit" (click)="onSubmit($event)">Submit</button>
+        </div>
+    </form>
+    <p id="form-message">{{formMessage}}</p>
+</section>
