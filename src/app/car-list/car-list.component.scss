@@ -1,3 +1,43 @@
 .card-img-top {
-    height: 180px;
+    height: 150px;
+}
+
+.card-img-details {
+    height: 350px;
+    width: 100%;
+}
+
+#car-details-section {
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 0.375rem;
+    margin: 0 auto;
+
+    ::ng-deep.card {
+        border: none;
+    }
+}
+
+#car-details-table {
+    margin-top: 10px;
+}
+
+.card-title {
+    font-family: Roboto, sans-serif;
+    opacity: 1;
+}
+
+.strike {
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.zoom-anim {
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.zoom-anim:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }

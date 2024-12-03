@@ -1,10 +1,85 @@
-<div class="container mt-5" id="packages">
-    <h2>Our Range of Vehicles</h2>
-    <div class="row">
-      <div class="col-md-2" *ngFor="let car of carList">
-        <div class="card">
-          <img [src]="car.image" class="card-img-top" alt="Car Image">
-        </div>
+<div class="container mt-5 mb-5" id="vehicles">
+  <h2>Our Range of Vehicles</h2>
+  <div class="row">
+    <div class="col-md-2" *ngFor="let car of carList">
+      <div class="card">
+        <img [src]="car.image" class="card-img-top zoom-anim" alt="Car Image" (click)="onHoverCar()">
       </div>
     </div>
   </div>
+  <div class="row" id="car-details-section" *ngIf="showCarDetails == true">
+    <div class="col-md-5">
+      <div class="card">
+        <img src="{{linkPath}}assets/car-1.jpg" class="card-img-details" alt="Car Image Details">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <h3 class="text-danger margin-price text-center">
+          <span class="font-weight-bold strike">₹ 6892</span>
+          <br>
+          <span class="font-weight-bold color-green">₹ 6202.4</span>
+        </h3>
+        <h6 class="card-category text-info margin-bottom-10 text-center" style="text-transform: uppercase">HATCHBACK
+          (AC)</h6>
+        <h5 class="card-title text-center">Swift, WagonR or Similar</h5>
+        <hr>
+        <table class="col-md-12" id="car-details-table">
+          <tbody>
+            <tr>
+              <td class="text-start">
+                <p class="font-weight-bold text-smoke height-1em">Included Km</p>
+              </td>
+              <td class="text-end"><span class="font-weight-bold color-green">527 Km </span></td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                <p class="font-weight-bold text-smoke height-1em">Extra fare/Km</p>
+              </td>
+              <td class="text-end"><span class="font-weight-bold color-green">₹ 11.2/Km</span></td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                <p class="font-weight-bold text-smoke height-1em">Fuel Charges</p>
+              </td>
+              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                <p class="font-weight-bold text-smoke height-1em">Driver Charges</p>
+              </td>
+              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+            </tr>
+            <tr>
+              <td class="text-start">
+                <p class="font-weight-bold text-smoke height-1em">Night Charges</p>
+              </td>
+              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="col-md-12 text-center">
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="text-center" style="margin: 20px 0; font-size: large;">Other Charges and Taxes</div>
+      <div class="text-start" style="font-size: 14px;">
+        <ul>
+          <li>Vehicle and fuel charges included</li>
+          <li>Driver Night Charges included</li>
+          <li>For Round trip bookings, all the local sightseeing in the mentioned cities is included.</li>
+          <li>5% GST Extra</li>
+          <li>Included Kilometers will start from pickup location</li>
+          <li>Driver allowance includes driver's stay, food and night charges</li>
+          <li>Toll and state tax extra</li>
+          <li>Parking charges extra if applicable</li>
+          <li>AC will remain switch off in hill areas</li>
+          <li>For round trip booking, Kilometers will count from pickup location to pickup location</li>
+          <li>Rohtang Pass needs special permit and is not included in any trip</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
