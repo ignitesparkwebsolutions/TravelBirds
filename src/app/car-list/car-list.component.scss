@@ -41,3 +41,17 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+@media (min-width: 768px) {
+    .closer {
+        float: right;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .closer {
+        display: none;
+    }
+}

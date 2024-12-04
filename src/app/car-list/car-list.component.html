@@ -3,58 +3,57 @@
   <div class="row">
     <div class="col-md-2" *ngFor="let car of carList">
       <div class="card">
-        <img [src]="car.image" class="card-img-top zoom-anim" alt="Car Image" (click)="onHoverCar()">
+        <img [src]="car.image" class="card-img-top zoom-anim" alt="Car Image" (click)="onHoverCar(car.id)">
       </div>
     </div>
   </div>
   <div class="row" id="car-details-section" *ngIf="showCarDetails == true">
     <div class="col-md-5">
       <div class="card">
-        <img src="{{linkPath}}assets/car-1.jpg" class="card-img-details" alt="Car Image Details">
+        <img src="{{selectedCar.image}}" class="card-img-details" alt="Car Image Details">
       </div>
     </div>
     <div class="col-md-3">
       <div class="card">
         <h3 class="text-danger margin-price text-center">
-          <span class="font-weight-bold strike">₹ 6892</span>
+          <span class="font-weight-bold strike">₹ {{selectedCar.mrp}}</span>
           <br>
-          <span class="font-weight-bold color-green">₹ 6202.4</span>
+          <span class="font-weight-bold color-green">₹ {{selectedCar.offerPrice}}</span>
         </h3>
-        <h6 class="card-category text-info margin-bottom-10 text-center" style="text-transform: uppercase">HATCHBACK
-          (AC)</h6>
-        <h5 class="card-title text-center">Swift, WagonR or Similar</h5>
+        <h6 class="card-category text-info margin-bottom-10 text-center" style="text-transform: uppercase">{{selectedCar.category}}</h6>
+        <h5 class="card-title text-center">{{selectedCar.title}}</h5>
         <hr>
         <table class="col-md-12" id="car-details-table">
           <tbody>
             <tr>
               <td class="text-start">
-                <p class="font-weight-bold text-smoke height-1em">Included Km</p>
+                <p class="font-weight-bold text-smoke height-1em">Pre-Included Km</p>
               </td>
-              <td class="text-end"><span class="font-weight-bold color-green">527 Km </span></td>
+              <td class="text-end"><span class="font-weight-bold color-green">{{selectedCar.includedKm}} </span></td>
             </tr>
             <tr>
               <td class="text-start">
                 <p class="font-weight-bold text-smoke height-1em">Extra fare/Km</p>
               </td>
-              <td class="text-end"><span class="font-weight-bold color-green">₹ 11.2/Km</span></td>
+              <td class="text-end"><span class="font-weight-bold color-green">₹ {{selectedCar.perKmRate}}</span></td>
             </tr>
             <tr>
               <td class="text-start">
                 <p class="font-weight-bold text-smoke height-1em">Fuel Charges</p>
               </td>
-              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+              <td class="text-end"><span class="font-weight-bold color-green">{{selectedCar.fuelCharges}} </span></td>
             </tr>
             <tr>
               <td class="text-start">
                 <p class="font-weight-bold text-smoke height-1em">Driver Charges</p>
               </td>
-              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+              <td class="text-end"><span class="font-weight-bold color-green">{{selectedCar.driverCharges}} </span></td>
             </tr>
             <tr>
               <td class="text-start">
                 <p class="font-weight-bold text-smoke height-1em">Night Charges</p>
               </td>
-              <td class="text-end"><span class="font-weight-bold color-green">Included </span></td>
+              <td class="text-end"><span class="font-weight-bold color-green">{{selectedCar.nightCharges}} </span></td>
             </tr>
           </tbody>
         </table>
@@ -64,6 +63,7 @@
       </div>
     </div>
     <div class="col-md-4">
+      <mat-icon class="closer" (click)="closeSection()">close</mat-icon>
       <div class="text-center" style="margin: 20px 0; font-size: large;">Other Charges and Taxes</div>
       <div class="text-start" style="font-size: 14px;">
         <ul>

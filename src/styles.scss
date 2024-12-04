@@ -96,3 +96,45 @@ body {
 .color-green {
   color: #01c501;
 }
+
+@media (min-width: 1400px) {
+  .carousel-images div img {
+    width: 1320px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .carousel-images div img {
+    width: 1140px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .carousel-images div img {
+    width: 960px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .carousel-images div img {
+    width: 720px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .carousel-images div img {
+    width: 540px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 575px) {
+  .carousel-images div img {
+    width: 100vw;
+    height: 350px;
+  }
+}

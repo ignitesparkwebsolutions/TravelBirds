@@ -39,10 +39,6 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-images div img {
-    width: 1080px;
-}
-
 .carousel-images div {
     background-color: #efefef;
 }
@@ -55,4 +51,6 @@
     margin: auto;
     overflow: hidden;
     text-align: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
